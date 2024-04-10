@@ -1,0 +1,215 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+
+}
+
+a{
+text-decoration: none;
+}
+
+
+ul{
+ list-style: none;
+}
+
+
+body{
+display: grid;  /*Permite que nós usaremos várias unidades de medidapermite configurar lealtes e permite colocar um elemento debaixo do outro ou do lado*/
+height: 100vh;
+width: 100%;
+background: linear-gradient( to right, #99004D 0%,#ff0080 100% );
+place-items: center;  /*Propriedade que funciona na tag (Display-grid) serve para centralizar os elementos de uma forma itimizada, aling-imtes:center e text-alingn:center*/ 
+}
+
+
+
+.container{
+background: #ffff;
+max-width: 350px;  /*Serve para limitar o tamanho do elemento perante ao width:100% logo ele ficará limitado aos 350px da tag max-widh (Possível mudanças)*/
+width: 100%;
+padding: 25px 30px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15); /*Propriedade para criar sombra nos eleemntos*/
+}
+
+.title{
+
+font-size: 30px;
+font-weight: 600;  /*peso da fonte*/
+margin: 20px 0 10px 0;
+position: relative; 
+}
+
+
+.title::before{
+content:'' ;
+position: absolute;
+height: 4px;
+width: 33px;
+bottom: 1px;
+left: 0;
+border-radius: 5px;
+background: linear-gradient( to right, #99004D 0%,#ff0080 100% );}
+
+.input-box{
+
+width: 100%;
+height: 45px;
+margin-top: 25px;
+position: relative;
+}
+
+
+.input-box input{
+
+height: 100%;
+
+width: 100%;
+
+outline: none; /*Deleta configuração padão de borda*/
+
+font-size: 16px;
+
+border: none; 
+
+}
+
+.underline::before{
+
+position: absolute;
+content: '';
+height: 2px;
+width: 100%;
+background: #ccc;
+left: 0; 
+bottom: 0;
+
+}
+
+ .underline::after{
+
+position: absolute;
+content: '';
+height: 2px; 
+width: 100%;
+left: 0;
+bottom: 0;
+transform: scaleX(0);
+transform-origin: left;
+transition: all 0.3s ease;
+background: linear-gradient( to right, #99004D 0%,#ff0080 100% );
+
+}
+
+
+.input-box input:focus ~ .underline::after,
+
+ .input-box input:valid ~ .underline::after{
+
+transform: scaleX(1);
+transform-origin: left;
+transition: all 0.3 ease;
+}
+
+
+ .button{
+
+    margin: 40px 0px 20px 0; /*Espaçamento externo*/
+}
+
+.container form .input-box [type="Submit"]{
+
+font-size: 17px;
+
+color: #ffff;
+
+border-radius: 5px;
+
+background: linear-gradient( to right, #99004D 0%,#ff0080 100% );
+
+transition: all 0.3s ease;
+
+cursor: pointer;}
+
+
+.container form .input-box [type="Submit"]:hover{
+
+
+ letter-spacing: 1px; /*Espaçamento entre as letras*/
+
+ background: linear-gradient( to left, #99004D 0%,#ff0080 100% );}
+
+
+ .option{
+
+font-size: 14px;
+
+text-align: center;
+}
+
+
+.twitter a, 
+.facebook a{ 
+
+display: block; /*alinhamento e espaçamento um ecima do outro*/
+width: 100%;
+height: 45px;
+font-size: 15px;
+color: #ffff;
+line-height: 45px;
+border-radius: 5px;
+padding: left;  /*espaçamento interno*/
+
+}
+
+ 
+.text{
+
+    padding-right: 12px;
+    font-size: 20px;
+
+}
+
+
+ .twitter a{
+
+
+margin: 20px 0 15px 0;
+background: linear-gradient( to left, #00acee 0%, #2580a1 100% );
+transition: all 0.5s ease;
+
+} 
+
+
+ .twitter a:hover{
+
+ background: linear-gradient( to right, #00acee 0%, #2580a1 100% );
+
+scale: 1.1; /*Quando passar o mouse essa taga faz o elemento saltar*/
+
+border-radius: 15px;
+
+} 
+
+
+ .facebook a{
+
+        margin: 20px 0 50px 0;
+        
+      transition: all 0.5s ease;
+
+        background: linear-gradient( to left, #3b5998 0%,#476bb8 100% );
+    
+    }
+
+    
+
+     .facebook a:hover{
+
+         scale: 1.1;
+         border-radius: 15px;
+            background: linear-gradient( to right, #3b5998 0%,#476bb8 100% );} 
+        
